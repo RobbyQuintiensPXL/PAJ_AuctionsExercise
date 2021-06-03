@@ -1,16 +1,29 @@
 package be.pxl.auctions.model;
 
+import org.hibernate.annotations.Cascade;
+
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
+@Entity
+@Table(name = "auction")
+@NamedQueries({
+        @NamedQuery(name = "findAllAuctions", query = "SELECT a FROM Auction a") })
 public class Auction {
+    @Id
+    @GeneratedValue
     private long id;
     private String description;
     private LocalDate endDate;
-    public List<Bid> bids = new ArrayList<>();
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Bid> bids = new ArrayList<>();
 
     public Auction() {
+        //
     }
 
     public long getId() {
@@ -41,4 +54,23 @@ public class Auction {
         return bids;
     }
 
+    public void addBid(Bid bid){
+
+    }
+
+    public void setBids(List<Bid> bids) {
+        this.bids = bids;
+    }
+
+    public boolean isFinished() {
+        return endDate.isBefore(LocalDate.now());
+    }
+
+    public Bid findHighestBid() {
+        if (bids.size() == 0) {
+            return null;
+        } else {
+            return bids.stream().max(Comparator.comparing(Bid::getAmount)).get();
+        }
+    }
 }
