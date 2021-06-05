@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="448e5b8f-4d5f-4071-99da-0ff5b43de788" name="Default Changelist" comment="">
+    <list default="true" id="448e5b8f-4d5f-4071-99da-0ff5b43de788" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/pxl/auctions/servlet/CountServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/pxl/auctions/AuctionsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/auctions/AuctionsApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/pxl/auctions/model/Auction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/auctions/model/Auction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/pxl/auctions/model/Bid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/auctions/model/Bid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/pxl/auctions/rest/AuctionRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/auctions/rest/AuctionRest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/pxl/auctions/service/AuctionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/auctions/service/AuctionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/be/pxl/auctions/dao/impl/UserDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be/pxl/auctions/dao/impl/UserDaoImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/be/pxl/auctions/model/UserGetAgeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be/pxl/auctions/model/UserGetAgeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/be/pxl/auctions/service/UserServiceCreateUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be/pxl/auctions/service/UserServiceCreateUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/be/pxl/auctions/util/EmailValidatorIsValidTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be/pxl/auctions/util/EmailValidatorIsValidTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/be/pxl/auctions/AuctionsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/pxl/auctions/AuctionsApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/be/pxl/auctions/model/Auction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/pxl/auctions/model/Auction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/be/pxl/auctions/rest/AuctionRest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/pxl/auctions/rest/AuctionRest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/be/pxl/auctions/service/AuctionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/pxl/auctions/service/AuctionService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,30 +73,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in auctions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="auctions" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuctionDaoImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="auctions" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="be.pxl.auctions.dao.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="be.pxl.auctions.dao.impl" />
-      <option name="MAIN_CLASS_NAME" value="be.pxl.auctions.dao.impl.AuctionDaoImplTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuctionServiceCreateAuctionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AuctionServiceDoBidTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="auctions" />
       <extension name="coverage">
         <pattern>
@@ -100,13 +82,61 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="be.pxl.auctions.service" />
-      <option name="MAIN_CLASS_NAME" value="be.pxl.auctions.service.AuctionServiceCreateAuctionTest" />
+      <option name="MAIN_CLASS_NAME" value="be.pxl.auctions.service.AuctionServiceDoBidTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuctionServiceGetAuctionByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AuctionServiceDoBidTest.returnExceptionBodBySameUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auctions" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.pxl.auctions.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.pxl.auctions.service" />
+      <option name="MAIN_CLASS_NAME" value="be.pxl.auctions.service.AuctionServiceDoBidTest" />
+      <option name="METHOD_NAME" value="returnExceptionBodBySameUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuctionServiceDoBidTest.returnExceptionWhenBodIsLower" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auctions" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.pxl.auctions.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.pxl.auctions.service" />
+      <option name="MAIN_CLASS_NAME" value="be.pxl.auctions.service.AuctionServiceDoBidTest" />
+      <option name="METHOD_NAME" value="returnExceptionWhenBodIsLower" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuctionServiceDoBidTest.returnHighestBodAfterAdding" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auctions" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.pxl.auctions.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.pxl.auctions.service" />
+      <option name="MAIN_CLASS_NAME" value="be.pxl.auctions.service.AuctionServiceDoBidTest" />
+      <option name="METHOD_NAME" value="returnHighestBodAfterAdding" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuctionServiceGetAuctionByIdTest.returnsNullWhenNoAuctionWithGivenIdFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="auctions" />
       <extension name="coverage">
         <pattern>
@@ -116,22 +146,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="be.pxl.auctions.service" />
       <option name="MAIN_CLASS_NAME" value="be.pxl.auctions.service.AuctionServiceGetAuctionByIdTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FindHighestBidTest.findHighestBid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="auctions" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="be.pxl.auctions.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="be.pxl.auctions.model" />
-      <option name="MAIN_CLASS_NAME" value="be.pxl.auctions.model.FindHighestBidTest" />
-      <option name="METHOD_NAME" value="findHighestBid" />
+      <option name="METHOD_NAME" value="returnsNullWhenNoAuctionWithGivenIdFound" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -146,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in auctions" />
-        <item itemvalue="JUnit.AuctionServiceGetAuctionByIdTest" />
-        <item itemvalue="JUnit.AuctionServiceCreateAuctionTest" />
-        <item itemvalue="JUnit.AuctionDaoImplTest" />
-        <item itemvalue="JUnit.FindHighestBidTest.findHighestBid" />
+        <item itemvalue="JUnit.AuctionServiceDoBidTest.returnExceptionBodBySameUser" />
+        <item itemvalue="JUnit.AuctionServiceDoBidTest.returnExceptionWhenBodIsLower" />
+        <item itemvalue="JUnit.AuctionServiceDoBidTest.returnHighestBodAfterAdding" />
+        <item itemvalue="JUnit.AuctionServiceDoBidTest" />
+        <item itemvalue="JUnit.AuctionServiceGetAuctionByIdTest.returnsNullWhenNoAuctionWithGivenIdFound" />
       </list>
     </recent_temporary>
   </component>
@@ -164,11 +179,30 @@
       <updated>1622571782381</updated>
       <workItem from="1622571785985" duration="2943000" />
       <workItem from="1622646675253" duration="2681000" />
-      <workItem from="1622656479464" duration="25308000" />
+      <workItem from="1622656479464" duration="36065000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1622743061342</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1622743061343</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update">
+      <created>1622743266398</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1622743266398</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

@@ -40,10 +40,9 @@ public class AuctionRest {
     }
 
     @PostMapping("{auctionId}/bids")
-    public AuctionDTO addBid(@PathVariable("auctionId") long auctionId, BidCreateResource bidCreateResource) throws NotFoundException {
-        auctionService.doBid(auctionId, bidCreateResource);
-
-        return auctionService.getAuctionById(auctionId);
+    public void addBid(@PathVariable("auctionId") long auctionId, @RequestBody BidCreateResource bidCreateResource) throws NotFoundException {
+        AuctionDTO toAdd = auctionService.getAuctionById(auctionId);
+        auctionService.doBid(toAdd.getId(), bidCreateResource);
     }
 
 }

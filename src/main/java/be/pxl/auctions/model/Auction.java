@@ -19,7 +19,7 @@ public class Auction {
     private long id;
     private String description;
     private LocalDate endDate;
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Bid> bids = new ArrayList<>();
 
     public Auction() {
@@ -55,7 +55,7 @@ public class Auction {
     }
 
     public void addBid(Bid bid){
-
+        bids.add(bid);
     }
 
     public void setBids(List<Bid> bids) {

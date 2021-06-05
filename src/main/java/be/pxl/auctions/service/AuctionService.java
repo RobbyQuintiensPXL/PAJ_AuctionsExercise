@@ -61,11 +61,24 @@ public class AuctionService {
     }
 
     private AuctionDTO mapAuction(Auction auction) {
+        double amount;
+        String highestBidBy;
+        if (auction.findHighestBid() == null){
+            amount = 0;
+            highestBidBy = null;
+        } else {
+            amount = auction.findHighestBid().getAmount();
+            highestBidBy = auction.findHighestBid().getUser().getEmail();
+        }
+
         AuctionDTO auctionDTO = new AuctionDTO();
         auctionDTO.setId(auction.getId());
         auctionDTO.setFinished(auction.isFinished());
         auctionDTO.setDescription(auction.getDescription());
         auctionDTO.setEndDate(auction.getEndDate());
+        auctionDTO.setNumberOfBids(auction.getBids().size());
+        auctionDTO.setHighestBid(amount);
+        auctionDTO.setHighestBidBy(highestBidBy);
         return auctionDTO;
     }
 
@@ -82,6 +95,14 @@ public class AuctionService {
         Optional<User> user = userDao.findUserByEmail(bidCreateResource.getEmail());
         if (user.isEmpty()) {
             throw new NotFoundException("Gebruiker niet gevonden");
+        }
+
+        if (auction.get().findHighestBid().getUser().getEmail().equals(bidCreateResource.getEmail())){
+            throw new InvalidBidException("Huidige gebruiker heeft al het hoogste bod");
+        }
+
+        if (auction.get().findHighestBid().getAmount() >= bidCreateResource.getPrice()){
+            throw new InvalidBidException("Bod kan niet gelijk of lager als huidig bod zijn");
         }
 
         Auction newAuction = auction.get();
