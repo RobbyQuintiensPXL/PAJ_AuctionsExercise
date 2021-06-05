@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="448e5b8f-4d5f-4071-99da-0ff5b43de788" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/pxl/auctions/rest/resource/BidCreateResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/auctions/rest/resource/BidCreateResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/be/pxl/auctions/service/AuctionServiceDoBidTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be/pxl/auctions/service/AuctionServiceDoBidTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/be/pxl/auctions/rest/resource/BidCreateResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/pxl/auctions/rest/resource/BidCreateResource.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,10 +51,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Opdrachten/BudgetPlanner/PAJ_BudgetPlannerBackend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="Spring Boot.AuctionsApplication">
+  <component name="RunManager" selected="JUnit.AuctionServiceDoBidTest">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -59,6 +62,14 @@
         </value>
       </option>
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in auctions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auctions" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -126,22 +137,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuctionServiceGetAuctionByIdTest.returnsNullWhenNoAuctionWithGivenIdFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="auctions" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="be.pxl.auctions.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="be.pxl.auctions.service" />
-      <option name="MAIN_CLASS_NAME" value="be.pxl.auctions.service.AuctionServiceGetAuctionByIdTest" />
-      <option name="METHOD_NAME" value="returnsNullWhenNoAuctionWithGivenIdFound" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AuctionsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="auctions" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="be.pxl.auctions.AuctionsApplication" />
@@ -151,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AuctionServiceDoBidTest" />
         <item itemvalue="JUnit.AuctionServiceDoBidTest.returnExceptionBodBySameUser" />
         <item itemvalue="JUnit.AuctionServiceDoBidTest.returnExceptionWhenBodIsLower" />
+        <item itemvalue="JUnit.All in auctions" />
         <item itemvalue="JUnit.AuctionServiceDoBidTest.returnHighestBodAfterAdding" />
-        <item itemvalue="JUnit.AuctionServiceDoBidTest" />
-        <item itemvalue="JUnit.AuctionServiceGetAuctionByIdTest.returnsNullWhenNoAuctionWithGivenIdFound" />
       </list>
     </recent_temporary>
   </component>
@@ -169,7 +164,7 @@
       <updated>1622571782381</updated>
       <workItem from="1622571785985" duration="2943000" />
       <workItem from="1622646675253" duration="2681000" />
-      <workItem from="1622656479464" duration="37210000" />
+      <workItem from="1622656479464" duration="38938000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1622743061342</created>
@@ -192,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622895863118</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <created>1622897080265</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1622897080265</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,5 +203,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

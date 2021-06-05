@@ -6,6 +6,7 @@ import be.pxl.auctions.model.Auction;
 import be.pxl.auctions.model.Bid;
 import be.pxl.auctions.model.User;
 import be.pxl.auctions.rest.resource.AuctionDTO;
+import be.pxl.auctions.rest.resource.BidCreateResource;
 import be.pxl.auctions.util.exception.InvalidBidException;
 import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.BeforeEach;
@@ -20,6 +21,7 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -41,8 +43,10 @@ public class AuctionServiceDoBidTest {
     public void init() {
         user01 = new User();
         user01.setFirstName("User1");
+        user01.setEmail("user1@test.be");
         user02 = new User();
         user02.setFirstName("User2");
+        user02.setEmail("user2@test.be");
 
         auction = new Auction();
         auction.setId(AUCTION_ID);
@@ -63,22 +67,26 @@ public class AuctionServiceDoBidTest {
     @Test
     public void returnExceptionWhenBodIsLower() {
         when(auctionDao.findAuctionById(AUCTION_ID)).thenReturn(Optional.of(auction));
-        Bid newBid = new Bid(user01, LocalDate.now(), 600);
-//        auction.addBid(newBid);
+        when(userDao.findUserByEmail(any())).thenReturn(Optional.of(user01));
 
-        AuctionDTO auctionDto = auctionService.getAuctionById(AUCTION_ID);
+        BidCreateResource bidCreateResource = new BidCreateResource();
+        bidCreateResource.setEmail(user01.getEmail());
+        bidCreateResource.setPrice(600);
 
-        assertThrows(InvalidBidException.class, () -> auction.addBid(newBid));
+
+        assertThrows(InvalidBidException.class, () -> auctionService.doBid(AUCTION_ID, bidCreateResource));
     }
 
     @Test
     public void returnExceptionBodBySameUser() {
         when(auctionDao.findAuctionById(AUCTION_ID)).thenReturn(Optional.of(auction));
-        Bid newBid = new Bid(user02, LocalDate.now(), 800);
+        when(userDao.findUserByEmail(any())).thenReturn(Optional.of(user02));
 
-        AuctionDTO auctionDto = auctionService.getAuctionById(AUCTION_ID);
+        BidCreateResource bidCreateResource = new BidCreateResource();
+        bidCreateResource.setEmail(user02.getEmail());
+        bidCreateResource.setPrice(800);
 
-        assertThrows(InvalidBidException.class, () -> auction.addBid(newBid));
+        assertThrows(InvalidBidException.class, () -> auctionService.doBid(AUCTION_ID, bidCreateResource));
     }
 
 

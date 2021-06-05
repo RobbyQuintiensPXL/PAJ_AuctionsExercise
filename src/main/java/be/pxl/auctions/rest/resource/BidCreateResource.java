@@ -17,4 +17,8 @@ public class BidCreateResource {
         return price;
     }
 
+    public void setPrice(double price){
+        this.price = price;
+    }
+
 }
